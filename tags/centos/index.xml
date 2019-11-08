@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>centos on Brave New World</title>
+    <link>https://zhihuya188.github.io/tags/centos/</link>
+    <description>Recent content in centos on Brave New World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 08 Nov 2019 12:16:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://zhihuya188.github.io/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>centos7使用笔记</title>
+      <link>https://zhihuya188.github.io/2019/11/centos7%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 08 Nov 2019 12:16:58 +0800</pubDate>
+      
+      <guid>https://zhihuya188.github.io/2019/11/centos7%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;本文主要记录了centos7一些基本使用，包括换源，创建超级用户，安装sqlite3，centos安装python3，virtualenv等&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

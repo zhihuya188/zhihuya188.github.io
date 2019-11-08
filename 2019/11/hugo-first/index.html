@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>hugo部署笔记 - Brave New World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="洋洋" /><meta name="description" content="hugo部署笔记" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://zhihuya188.github.io/2019/11/hugo-first/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="hugo部署笔记" />
+<meta property="og:description" content="hugo部署笔记" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhihuya188.github.io/2019/11/hugo-first/" />
+<meta property="article:published_time" content="2019-11-03T19:01:58+08:00" />
+<meta property="article:modified_time" content="2019-11-03T19:01:58+08:00" />
+<meta itemprop="name" content="hugo部署笔记">
+<meta itemprop="description" content="hugo部署笔记">
+
+
+<meta itemprop="datePublished" content="2019-11-03T19:01:58&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-03T19:01:58&#43;08:00" />
+<meta itemprop="wordCount" content="830">
+
+
+
+<meta itemprop="keywords" content="hugo,blog," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="hugo部署笔记"/>
+<meta name="twitter:description" content="hugo部署笔记"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于我</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于我</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">hugo部署笔记</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-11-03 </span>
+        <div class="post-category">
+            <a href="/categories/blog/"> blog </a>
+            </div>
+          <span class="more-meta"> 约 830 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#安装-hugo">安装 Hugo</a>
+<ul>
+<li><a href="#windows-安装-hugo">Windows 安装 Hugo</a></li>
+<li><a href="#建立-hugo-项目">建立 Hugo 项目</a></li>
+<li><a href="#添加主题">添加主题</a></li>
+<li><a href="#添加新博客">添加新博客</a></li>
+<li><a href="#打包">打包</a></li>
+<li><a href="#部署到-github-pages">部署到 Github Pages</a></li>
+</ul></li>
+<li><a href="#参考">参考</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <blockquote>
+<p>Hugo 官方的定义是：</p>
+
+<p>Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again.(Hugo 是使用 Go 编写的快速而现代的静态站点生成器，旨在使网站创建变得有趣。)</p>
+</blockquote>
+
+<h2 id="安装-hugo">安装 Hugo</h2>
+
+<h3 id="windows-安装-hugo">Windows 安装 Hugo</h3>
+
+<p>在 <a href="https://github.com/gohugoio/hugo/releases/tag/v0.59.1">https://github.com/gohugoio/hugo/releases/tag/v0.59.1</a> 下载二进制包安装</p>
+
+<p>安装完成后(配置环境变量)，在命令行输入以下命令验证安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo version</pre></td></tr></table>
+</div>
+</div>
+<h3 id="建立-hugo-项目">建立 Hugo 项目</h3>
+
+<p>一个 Hugo 项目就是一个站点，创建命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo new site [project-name]</pre></td></tr></table>
+</div>
+</div>
+<p>例如我的站点名称是 blog,创建命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo new site blog</pre></td></tr></table>
+</div>
+</div>
+<p>创建完成后，在 blog 文件夹下会生成以下文件结构：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">.
+├── archetypes # 存放生成博客的模版
+├── assets # 存放被 Hugo Pipes 处理的文件
+├── config # 存放 hugo 配置文件 支持 JSON YAML TOML 三种格式配置文件
+├── content # 存放 markdown 文件
+├── data # 存放 Hugo 处理的数据
+├── layouts # 存放布局文件
+├── static # 存放静态文件 图片 CSS JS文件
+└── themes # 存放主题</pre></td></tr></table>
+</div>
+</div>
+<h3 id="添加主题">添加主题</h3>
+
+<p>进入根目录，克隆主题文件就是安装主题。</p>
+
+<p>为了快速搭建博客，可以使用主题。使用主题后，只需要向 content 文件夹添加 Markdown 文件即可。</p>
+
+<p>Hugo 有主题市场 <a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a> ，我选择了<code>even</code>：</p>
+
+<p>进入根目录，克隆主题文件就是安装主题。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">cd blog
+git clone https://github.com/olOwOlo/hugo-theme-even themes/even</pre></td></tr></table>
+</div>
+</div>
+<h3 id="添加新博客">添加新博客</h3>
+
+<p>添加新博客命令比较简单，命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo new post/my-first-blog.md</pre></td></tr></table>
+</div>
+</div>
+<p><code>hugo-theme-even</code> 的模版文件 <code>blog/themes/even/archetypes/default.md</code> 比较复杂，新建 <code>blog/archetypes/default.md</code> 文件覆盖掉即可。</p>
+
+<p>我的模板配置如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">---
+title: &#34;{{ replace .TranslationBaseName &#34;-&#34; &#34; &#34; | title }}&#34;
+date: {{ .Date }}
+description: &#34;&#34;
+draft: true
+tags: []
+categories: []
+---
+
+&lt;!--more--&gt;</pre></td></tr></table>
+</div>
+</div>
+<blockquote>
+<p>draft 参数控制网站上该页面是否显示。设置为 false 或者去掉该参数才显示。<!--more--> 之前的内容会自动作为页面摘要。</p>
+</blockquote>
+
+<h3 id="打包">打包</h3>
+
+<p>为了部署到线上，需要将 Markdown 文件打包成 HTML 文件。打包命令如下，even 是主题名：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">hugo -t even</pre></td></tr></table>
+</div>
+</div>
+<h3 id="部署到-github-pages">部署到 Github Pages</h3>
+
+<p>打包之后就是纯 HTML 文件，理论上所有支持部署静态页面的网站都是支持的。</p>
+
+<p>我的部署命令如下，更多部署方式查看 <a href="https://gohugo.io/hosting-and-deployment/">https://gohugo.io/hosting-and-deployment/</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="c1"># 部署到 github pages 脚本</span>
+<span class="c1"># 错误时终止脚本</span>
+<span class="nb">set</span> -e
+
+<span class="c1"># 删除打包文件夹</span>
+rm -rf public
+
+<span class="c1"># 打包。even 是主题</span>
+hugo -t even <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+
+<span class="c1"># 进入打包文件夹</span>
+<span class="nb">cd</span> public
+
+<span class="c1"># Add changes to git.</span>
+
+git init
+git add -A
+
+<span class="c1"># Commit changes.</span>
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;building site `date`&#34;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+
+<span class="c1"># 推送到githu</span>  
+<span class="c1"># nusr.github.io 只能使用 master分支</span>
+git push -f git@zhihu.github.com:zhihuya188/zhihuya188.github.io.git master
+
+<span class="c1"># 回到原文件夹</span>
+<span class="nb">cd</span> ..</pre></td></tr></table>
+</div>
+</div>
+<h2 id="参考">参考</h2>
+
+<p><a href="https://www.cnblogs.com/stevexu/p/10779375.html">Hugo + Github Pages 搭建个人博客</a></p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">洋洋</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-11-03
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/images/wechat-qr-code.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hugo/">hugo</a>
+          <a href="/tags/blog/">blog</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/2019/11/zhaichao/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">谁不是一边娶妻生子,一边死在路上</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/2019/11/test/">
+            <span class="next-text nav-default">git多账户管理</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2019-11-03 19:01:58 \x2b0800 CST',
+        title: 'hugo部署笔记',
+        clientID: '6230713a4391ba4c407f',
+        clientSecret: 'f85b63803056aaa707d6a745926c66445bde3a26',
+        repo: 'zhihuya188.github.io',
+        owner: 'zhihuya188',
+        admin: ['zhihuya188'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/zhihuya188" class="iconfont icon-github" title="github"></a>
+  <a href="https://zhihuya188.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">洋洋</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

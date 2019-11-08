@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Brave New World</title>
+    <link>https://zhihuya188.github.io/tags/blog/</link>
+    <description>Recent content in blog on Brave New World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 03 Nov 2019 19:01:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://zhihuya188.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hugo部署笔记</title>
+      <link>https://zhihuya188.github.io/2019/11/hugo-first/</link>
+      <pubDate>Sun, 03 Nov 2019 19:01:58 +0800</pubDate>
+      
+      <guid>https://zhihuya188.github.io/2019/11/hugo-first/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Hugo 官方的定义是：&lt;/p&gt;
+
+&lt;p&gt;Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again.(Hugo 是使用 Go 编写的快速而现代的静态站点生成器，旨在使网站创建变得有趣。)&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

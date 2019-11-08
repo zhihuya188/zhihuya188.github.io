@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>centos7使用笔记 - Brave New World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="洋洋" /><meta name="description" content="centos7使用笔记" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://zhihuya188.github.io/2019/11/centos7%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="centos7使用笔记" />
+<meta property="og:description" content="centos7使用笔记" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhihuya188.github.io/2019/11/centos7%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" />
+<meta property="article:published_time" content="2019-11-08T12:16:58+08:00" />
+<meta property="article:modified_time" content="2019-11-08T12:16:58+08:00" />
+<meta itemprop="name" content="centos7使用笔记">
+<meta itemprop="description" content="centos7使用笔记">
+
+
+<meta itemprop="datePublished" content="2019-11-08T12:16:58&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-08T12:16:58&#43;08:00" />
+<meta itemprop="wordCount" content="1088">
+
+
+
+<meta itemprop="keywords" content="Linux,centos,python,sqlite3,virtualenv," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="centos7使用笔记"/>
+<meta name="twitter:description" content="centos7使用笔记"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于我</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于我</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">centos7使用笔记</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-11-08 </span>
+        <div class="post-category">
+            <a href="/categories/%E4%B8%93%E4%B8%9A/"> 专业 </a>
+            <a href="/categories/linux/"> Linux </a>
+            <a href="/categories/centos/"> centos </a>
+            </div>
+          <span class="more-meta"> 约 1088 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#centos命令">centos命令</a></li>
+<li><a href="#centos7-换源">CentOS7 换源</a></li>
+<li><a href="#创建超级用户">创建超级用户</a></li>
+<li><a href="#安装sqlite3">安装sqlite3</a></li>
+<li><a href="#centos安装python3">centos安装python3</a></li>
+<li><a href="#centos安装-virtualenv">centos安装<code>virtualenv</code></a></li>
+<li><a href="#虚拟机centos7共享文件夹">虚拟机centos7共享文件夹</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <blockquote>
+<p>本文主要记录了centos7一些基本使用，包括换源，创建超级用户，安装sqlite3，centos安装python3，virtualenv等</p>
+</blockquote>
+
+<hr>
+
+<h3 id="centos命令">centos命令</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 查看本机ip
+ifconfig</pre></td></tr></table>
+</div>
+</div>
+<h3 id="centos7-换源">CentOS7 换源</h3>
+
+<p>1.备份</p>
+
+<p><code>mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</code></p>
+
+<p>2.下载新的CentOS-Base.repo 到/etc/yum.repos.d/</p>
+
+<p><code>wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</code></p>
+
+<p>或者</p>
+
+<p><code>curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</code></p>
+
+<p>3.之后运行<code>yum makecache</code>生成缓存</p>
+
+<p>4.其他
+非阿里云ECS用户会出现 <code>Couldn't resolve host 'mirrors.cloud.aliyuncs.com'</code> 信息，不影响使用。用户也可自行修改相关配置: eg:</p>
+
+<p><code>sed -i -e '/mirrors.cloud.aliyuncs.com/d' -e '/mirrors.aliyuncs.com/d' /etc/yum.repos.d/CentOS-Base.re</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 运行以下命令生成缓存
+yum clean all
+yum makecache
+
+# 更新
+yum update
+yum upgrade</pre></td></tr></table>
+</div>
+</div>
+<h3 id="创建超级用户">创建超级用户</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 在 root 用户下运行这条命令创建一个新用户，zhangly 是用户名
+root@server:~# adduser zhangly
+
+# 为新用户设置密码
+# 注意在输密码的时候不会有字符显示，不要以为键盘坏了，正常输入即可
+root@server:~# passwd zhangly
+
+# 把新创建的用户加入超级权限组
+root@server:~# usermod -aG wheel zhangly
+
+# 切换到创建的新用户
+root@server:~# su - zhangly
+
+# 切换成功，@符号前面已经是新用户名而不是 root 了
+zhangly@server:$
+
+# 更新一下系统
+zhangly@server:$ sudo yum update
+zhangly@server:$ sudo yum upgrade
+
+# 安装gcc
+root@server:~# yum -y install gcc</pre></td></tr></table>
+</div>
+</div>
+<h3 id="安装sqlite3">安装sqlite3</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 查看版本
+zhangly@server:$ sqlite3 --version
+# sqlite 的官方下载地址: https://sqlite.org/download.html
+# 创建 src 目录并进到这个目录
+zhangly@server:$ mkdir -p ~/src
+zhangly@server:$ cd ~/src
+
+# 下载 sqlite3 源码并解压安装
+zhangly@server:$ wget https://sqlite.org/2019/sqlite-autoconf-3290000.tar.gz
+zhangly@server:$ tar zxvf sqlite-autoconf-3290000.tar.gz
+zhangly@server:$ cd sqlite-autoconf-3290000
+zhangly@server:$ ./configure
+zhangly@server:$ make
+zhangly@server:$ sudo make install
+
+# 重启
+zhangly@server:$ sudo init 6</pre></td></tr></table>
+</div>
+</div>
+<h3 id="centos安装python3">centos安装python3</h3>
+
+<p>1.安装可能的依赖：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 首先安装可能的依赖：
+sudo yum install -y openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel</pre></td></tr></table>
+</div>
+</div>
+<p>2.下载 Python 3.6.4 的源码并解压：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 然后下载 Python 3.6.4 的源码并解压：
+cd ~/src
+wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz
+tar -zxvf Python-3.6.4.tgz</pre></td></tr></table>
+</div>
+</div>
+<p>3.编译安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 最后编译安装：
+cd Python-3.6.4
+./configure LD_RUN_PATH=/usr/local/lib LDFLAGS=&#34;-L/usr/local/lib&#34; CPPFLAGS=&#34;-I/usr/local/include&#34;
+make LD_RUN_PATH=/usr/local/lib
+sudo make install</pre></td></tr></table>
+</div>
+</div>
+<p>4.更新pip</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 更新pip  --user
+pip install --upgrade pip
+
+# 升级pip出现的错误解决
+yangyang@ubuntu16-s:~$ pip
+Traceback (most recent call last):
+  File &#34;/usr/bin/pip&#34;, line 9, in &lt;module&gt;
+    from pip import main
+ImportError: cannot import name main
+
+sudo vim /usr/bin/pip
+
+# 将原来的
+from pip import main
+if __name__ == &#39;__main__&#39;:
+    sys.exit(main())
+# 改后的
+from pip import __main__
+if __name__ == &#39;__main__&#39;:
+    sys.exit(__main__._main())</pre></td></tr></table>
+</div>
+</div>
+<h3 id="centos安装-virtualenv">centos安装<code>virtualenv</code></h3>
+
+<p>1.安装包</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">sudo pip3 install virtualenv # 安装虚拟环境
+sudo pip3 install virtualenvwrapper  # 虚拟环境扩展包</pre></td></tr></table>
+</div>
+</div>
+<p>2.配置文件<code>.bashrc</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 配置文件.bashrc
+# 根据自己安装的路径填写 查找安装位置 whereis python3.6 | whereis virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
+source /usr/local/bin/virtualenvwrapper.sh</pre></td></tr></table>
+</div>
+</div>
+<p>3.使配置文件生效</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 使配置文件生效
+source .bashrc</pre></td></tr></table>
+</div>
+</div>
+<blockquote>
+<p>常用操作</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 创建虚拟环境
+mkvirtualenv -p python3  # 虚拟环境名称
+
+# 例：
+mkvirtualenv -p python3 py_django
+
+# 退出虚拟环境
+deactivate
+
+# 进入虚拟环境
+# 提示：workon后面有个空格，再按两次tab键。
+workon 两次tab键</pre></td></tr></table>
+</div>
+</div>
+<h3 id="虚拟机centos7共享文件夹">虚拟机centos7共享文件夹</h3>
+
+<blockquote>
+<p>在root用户下</p>
+</blockquote>
+
+<p>1.重新安装缺失的组件</p>
+
+<p><code>yum install gcc</code></p>
+
+<p><code>yum install kernel-devel</code></p>
+
+<p>2.更新刚安装的组件：</p>
+
+<p><code>yum update gcc -y</code></p>
+
+<p><code>yum update kernel -y</code></p>
+
+<p>3.重启：</p>
+
+<p><code>init 6</code></p>
+
+<p>4.重新安装<code>VMware Tools</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">tar -zxvf VMwareTools-10.2.0-7259539.tar.gz
+cd vmware-tools-distrib
+./vmware-install.pl</pre></td></tr></table>
+</div>
+</div>
+<blockquote>
+<p>共享文件夹位置在(<code>/mnt/hgfs/xx</code>)</p>
+</blockquote>
+
+<hr>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">洋洋</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-11-08
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/images/wechat-qr-code.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/linux/">Linux</a>
+          <a href="/tags/centos/">centos</a>
+          <a href="/tags/python/">python</a>
+          <a href="/tags/sqlite3/">sqlite3</a>
+          <a href="/tags/virtualenv/">virtualenv</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/2019/11/%E6%97%A0%E6%B3%95%E9%87%8D%E6%9D%A5%E7%9A%84%E4%B8%80%E7%94%9F/">
+            <span class="next-text nav-default">无法重来的一生</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2019-11-08 12:16:58 \x2b0800 CST',
+        title: 'centos7使用笔记',
+        clientID: '6230713a4391ba4c407f',
+        clientSecret: 'f85b63803056aaa707d6a745926c66445bde3a26',
+        repo: 'zhihuya188.github.io',
+        owner: 'zhihuya188',
+        admin: ['zhihuya188'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/zhihuya188" class="iconfont icon-github" title="github"></a>
+  <a href="https://zhihuya188.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">洋洋</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
