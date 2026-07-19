@@ -1,0 +1,45 @@
+baseURL = 'https://example.com/'
+languageCode = 'zh-cn'
+title = '我的 Hugo 站点'
+theme = 'PaperMod'
+
+# 作者信息（用于页脚与文章署名）
+[author]
+  name = '洋洋'
+
+[params]
+  # 站点描述，会写入 meta 标签，利于 SEO
+  description = '一个由 Hugo + PaperMod 构建的示例站点，已配置 GitHub Pages 自动部署。'
+  # 默认主题：light / dark / auto
+  defaultTheme = 'light'
+  # 是否显示右侧目录（TOC）
+  ShowToc = true
+  # 是否显示阅读进度条
+  ShowReadingProgress = true
+
+  # 首页欢迎区
+  [params.homeInfoParams]
+    Title = '嗨，欢迎来到我的站点 👋'
+    Content = '这是用 Hugo 和 PaperMod 主题搭建的示例网站，已经配好 GitHub Pages 自动部署。下面有一些示例文章，你可以随意替换成自己的内容。'
+
+  # 社交链接（显示在页脚，按需增删）
+  [params.socialIcons]
+    [params.socialIcons.github]
+      icon = 'github'
+      url = 'https://github.com/'
+    [params.socialIcons.rss]
+      icon = 'rss'
+      url = 'index.xml'
+
+# 顶部菜单
+[menu]
+  [[menu.main]]
+    identifier = 'posts'
+    name = '文章'
+    url = '/posts/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'about'
+    name = '关于'
+    url = '/about/'
+    weight = 20
