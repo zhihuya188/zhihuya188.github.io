@@ -43,3 +43,9 @@ theme = 'PaperMod'
     name = '关于'
     url = '/about/'
     weight = 20
+
+# 允许 Markdown 中渲染裸 HTML（保留文章里的 <hr> 等标签）
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
