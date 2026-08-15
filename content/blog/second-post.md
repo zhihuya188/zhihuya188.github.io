@@ -5,8 +5,12 @@ aliases:
 date: 2026-07-19T11:30:00+08:00
 draft: false
 description: "介绍如何通过 GitHub Actions 把 Hugo 站点自动部署到 GitHub Pages。"
-tags: ["部署", "GitHub Pages", "CI"]
-categories: ["示例"]
+tags:
+  - 部署
+  - GitHub Pages
+  - CI
+categories:
+  - 示例
 ---
 
 把 Hugo 站点部署到 GitHub Pages，最省心的方式是用 **GitHub Actions** 自动构建。

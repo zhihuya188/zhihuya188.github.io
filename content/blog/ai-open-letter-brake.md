@@ -3,8 +3,12 @@ title: "逾千人联署给 AI 装刹车：OpenAI、Anthropic 大佬罕见联合�
 date: 2026-08-14T16:00:00+08:00
 draft: false
 description: "硅谷超过 1100 人签署公开信，呼吁对前沿 AI 研发踩下刹车，OpenAI、Anthropic 等机构的核心人物均在名单之上。"
-tags: ["AI", "AI安全", "行业动态"]
-categories: ["AI 新闻"]
+tags:
+  - AI
+  - AI安全
+  - 行业动态
+categories:
+  - AI 新闻
 ---
 
 近日，一封呼吁"给 AI 装刹车"的公开信在硅谷引发广泛关注。据多家媒体报道，**超过 1100 人**参与联署，其中包括 OpenAI、Anthropic 等头部 AI 机构的研究人员与高管，声势之大被形容为"罕见"。

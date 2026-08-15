@@ -5,8 +5,12 @@ aliases:
 date: 2026-07-19T11:00:00+08:00
 draft: false
 description: "用 GitHub Actions 实现推送即部署，再也不用手动上传。"
-tags: ["部署", "GitHub Pages", "CI"]
-categories: ["运维"]
+tags:
+  - 部署
+  - GitHub Pages
+  - CI
+categories:
+  - 运维
 ---
 
 这个示例站点已经配好了自动部署，原理很简单：

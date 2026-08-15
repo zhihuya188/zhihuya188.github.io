@@ -5,8 +5,11 @@ aliases:
 date: 2026-07-19T10:00:00+08:00
 draft: false
 description: "这是用 Hugo 写的第一篇示例文章，演示基本写作与代码块。"
-tags: ["Hugo", "教程"]
-categories: ["示例"]
+tags:
+  - Hugo
+  - 教程
+categories:
+  - 示例
 ---
 
 欢迎！这是 **Hugo** 站点里的第一篇文章。

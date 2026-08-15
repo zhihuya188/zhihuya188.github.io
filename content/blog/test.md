@@ -3,10 +3,12 @@ title: "git多账户管理"
 aliases:
   - '/posts/test/'
 date: 2019-11-02T23:40:31+08:00
-description: ""
+description: "使用多个 GitHub 账户时的 SSH 与 remote 配置管理笔记。"
 draft: false
-tags: ["git"]
-categories: ["git"]
+tags:
+  - git
+categories:
+  - git
 ---
 
 > git 笔记

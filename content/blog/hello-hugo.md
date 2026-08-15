@@ -5,8 +5,11 @@ aliases:
 date: 2026-07-19T10:00:00+08:00
 draft: false
 description: "Hugo 让写博客变得简单：Markdown 即可，主题负责样式。"
-tags: ["Hugo", "静态站点"]
-categories: ["教程"]
+tags:
+  - Hugo
+  - 静态站点
+categories:
+  - 教程
 ---
 
 欢迎来到我的 **Hugo** 博客！

@@ -3,8 +3,12 @@ title: "阿里千问发布 Qwen-Image-3.0，国产多模态大模型再进阶"
 date: 2026-08-14T16:30:00+08:00
 draft: false
 description: "阿里千问系列迎来图像模型新版本 Qwen-Image-3.0，与此同时国内大模型调用量数据同样亮眼。"
-tags: ["AI", "大模型", "国产AI"]
-categories: ["AI 新闻"]
+tags:
+  - AI
+  - 大模型
+  - 国产AI
+categories:
+  - AI 新闻
 ---
 
 国产大模型赛道再迎新进展。据钛媒体报道，阿里千问（Qwen）团队发布了图像模型 **Qwen-Image-3.0**，进一步巩固其在多模态领域的布局。

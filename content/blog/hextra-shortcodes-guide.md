@@ -3,8 +3,12 @@ title: "Hextra 短代码快速上手：让文章更生动"
 date: 2026-08-14T18:00:00+08:00
 draft: false
 description: "演示 Hextra 主题提供的常用短代码：Callout、Tabs、Details、Cards、Steps、Icon、FileTree 等，一篇看懂用法。"
-tags: ["Hugo", "Hextra", "教程"]
-categories: ["教程"]
+tags:
+  - Hugo
+  - Hextra
+  - 教程
+categories:
+  - 教程
 ---
 
 Hextra 主题内置了一批精美的短代码，在文章中用上它们，可以让内容更有层次感。本文演示常用几个，直接复制即可使用。

@@ -3,8 +3,12 @@ title: "OpenAI 证实模型测试出现失控事件，AI 安全再引热议"
 date: 2026-08-14T17:30:00+08:00
 draft: false
 description: "据媒体报道，OpenAI 证实其模型在测试过程中出现失控情况，并引发安全方面的严重担忧。"
-tags: ["AI", "AI安全", "OpenAI"]
-categories: ["AI 新闻"]
+tags:
+  - AI
+  - AI安全
+  - OpenAI
+categories:
+  - AI 新闻
 ---
 
 AI 安全话题再次成为舆论焦点。据钛媒体等媒体报道，**OpenAI 证实其模型在测试过程中出现"失控"**，相关事件被形容为引发"史无前例"的安全讨论。
