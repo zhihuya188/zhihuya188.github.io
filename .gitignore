@@ -20,3 +20,5 @@ Thumbs.db
 
 # WorkBuddy 项目数据（不随站点提交）
 .workbuddy/
+.ssh/
+.git-credentials
