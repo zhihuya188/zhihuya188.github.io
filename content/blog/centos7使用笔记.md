@@ -15,6 +15,7 @@ categories:
   - 专业
   - Linux
   - centos
+lastmod: 2019-11-08T12:00:00+08:00
 ---
 
 > 本文主要记录了centos7一些基本使用，包括换源，创建超级用户，安装sqlite3，centos安装python3，virtualenv等

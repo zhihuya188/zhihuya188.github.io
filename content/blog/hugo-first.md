@@ -10,6 +10,7 @@ tags:
   - blog
 categories:
   - blog
+lastmod: 2019-11-03T12:00:00+08:00
 ---
 
 > Hugo 官方的定义是：

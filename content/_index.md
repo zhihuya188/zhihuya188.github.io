@@ -5,18 +5,19 @@ layout: hextra-home
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-headline >}}
-  嗨，我是洋洋 👋<br class="hx:sm:block hx:hidden" />用文字记录学习与生活
+  嗨，我是洋洋 👋<br class="hx:sm:block hx:hidden" />技术笔记 · 工具文档 · 生活随笔
 {{< /hextra/hero-headline >}}
 </div>
 
 <div class="hx:mb-12">
 {{< hextra/hero-subtitle >}}
-  这里是我的个人博客：技术笔记、生活随笔，<br class="hx:sm:block hx:hidden" />以及一些折腾路上的记录。
+  这里是我的个人站点：记录技术踩坑、分享工具使用心得，<br class="hx:sm:block hx:hidden" />以及一些折腾路上的笔记。
 {{< /hextra/hero-subtitle >}}
 </div>
 
 <div class="hx:mb-6">
 {{< hextra/hero-button text="阅读文章" link="blog" >}}
+{{< hextra/hero-button text="工具文档" link="docs/tools" style="outline" >}}
 {{< hextra/hero-button text="关于我" link="about" style="outline" >}}
 </div>
 
@@ -29,8 +30,8 @@ layout: hextra-home
     class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[240px]"
   >}}
   {{< hextra/feature-card
-    title="生活随笔"
-    subtitle="记录日常思考与感悟，让日子有迹可循。"
+    title="工具文档"
+    subtitle="AI 工具、搜索技巧、自动化工作流的使用笔记与配置速查。"
     class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[240px]"
   >}}
   {{< hextra/feature-card
