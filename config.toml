@@ -1,51 +1,79 @@
 baseURL = 'https://zhihuya188.github.io/'
-languageCode = 'zh-cn'
 title = '我的 Hugo 站点'
-theme = 'PaperMod'
+theme = 'stack'
 
-# 作者信息（用于页脚与文章署名）
-[author]
-  name = '洋洋'
+# 中文站点
+defaultContentLanguage = 'zh-cn'
+hasCJKLanguage = true
 
-[params]
-  # 站点描述，会写入 meta 标签，利于 SEO
-  description = '一个由 Hugo + PaperMod 构建的示例站点，已配置 GitHub Pages 自动部署。'
-  # 默认主题：light / dark / auto
-  defaultTheme = 'light'
-  # 是否显示右侧目录（TOC）
-  ShowToc = true
-  # 是否显示阅读进度条
-  ShowReadingProgress = true
+# 分页
+[pagination]
+    pagerSize = 5
 
-  # 首页欢迎区
-  [params.homeInfoParams]
-    Title = '嗨，欢迎来到我的站点 👋'
-    Content = '这是用 Hugo 和 PaperMod 主题搭建的示例网站，已经配好 GitHub Pages 自动部署。下面有一些示例文章，你可以随意替换成自己的内容。'
+# URL 结构：page 类页面（search/archives）放在根路径。
+# 注意：posts 不写 permalinks，保持 Hugo 默认「文件名作 slug」，
+# 以免改变现有文章 URL（例如 /posts/deploy-to-github-pages/）。
+[permalinks]
+    page = '/:slug/'
 
-  # 社交链接（显示在页脚，按需增删）
-  [params.socialIcons]
-    [params.socialIcons.github]
-      icon = 'github'
-      url = 'https://github.com/'
-    [params.socialIcons.rss]
-      icon = 'rss'
-      url = 'index.xml'
-
-# 顶部菜单
-[menu]
-  [[menu.main]]
-    identifier = 'posts'
-    name = '文章'
-    url = '/posts/'
-    weight = 10
-  [[menu.main]]
-    identifier = 'about'
-    name = '关于'
-    url = '/about/'
-    weight = 20
-
-# 允许 Markdown 中渲染裸 HTML（保留文章里的 <hr> 等标签）
+# Markdown 渲染（允许裸 HTML，保留文章里的 <hr> 等标签）
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+# 主题参数
+[params]
+    # 首页 / 归档页展示的文章目录
+    mainSections = ['posts']
+    # RSS 输出全文
+    rssFullContent = true
+
+    # 页脚
+    [params.footer]
+        since = 2026
+
+    # 侧边栏
+    [params.sidebar]
+        emoji = '📝'
+        subtitle = '记录学习与生活的个人博客'
+
+    # 文章页
+    [params.article]
+        toc = true
+        readingTime = true
+
+    # 首页小部件（搜索 / 归档 / 分类 / 标签云）
+    [params.widgets]
+        homepage = [
+            { type = 'search' },
+            { type = 'archives', params = { limit = 5 } },
+            { type = 'categories', params = { limit = 10 } },
+            { type = 'tag-cloud', params = { limit = 10 } },
+        ]
+        page = [{ type = 'toc' }]
+
+    # 颜色主题切换（亮 / 暗 / 跟随系统）
+    [params.colorScheme]
+        toggle = true
+        default = 'auto'
+
+# 主菜单（search / archives 页面自带的菜单项会自动追加）
+[menu]
+    [[menu.main]]
+        identifier = 'home'
+        name = '首页'
+        url = '/'
+        weight = 1
+
+    [[menu.main]]
+        identifier = 'posts'
+        name = '文章'
+        url = '/posts/'
+        weight = 2
+
+    [[menu.main]]
+        identifier = 'about'
+        name = '关于'
+        url = '/about/'
+        weight = 5
