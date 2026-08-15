@@ -19,17 +19,17 @@
           <span aria-hidden="true" class="hx:text-gray-300 hx:dark:text-neutral-600">·</span>
           <span>按文章数排序</span>
         </div>
-        {{/* 标签按钮列表（留白舒适，hover 有上浮+高亮交互） */}}
+        {{/* 标签按钮列表（hover 交互样式在 assets/css/custom.css） */}}
         <nav aria-label="标签列表" class="hx:mt-5 hx:flex hx:flex-wrap hx:gap-4">
           {{ $terms := sort .Data.Terms.ByCount "Count" "desc" }}
           {{ range $terms }}
             <a
               href="{{ .Page.RelPermalink }}"
               title="{{ .Page.Data.Term }}（{{ .Count }} 篇文章）"
-              class="hx:group hx:inline-flex hx:items-center hx:gap-2.5 hx:rounded-lg hx:border hx:border-gray-200 hx:bg-white hx:px-4 hx:py-2 hx:text-sm hx:font-medium hx:text-gray-700 hx:shadow-sm hx:transition-all hx:duration-200 hx:hover:-hx:translate-y-0.5 hx:hover:border-primary-400 hx:hover:bg-primary-50 hx:hover:text-primary-700 hx:hover:shadow-md hx:focus-visible:hx:ring-2 hx:focus-visible:hx:ring-primary-500 hx:focus-visible:hx:ring-offset-2 hx:dark:border-neutral-700 hx:dark:bg-neutral-900 hx:dark:text-gray-300 hx:dark:hover:border-primary-500 hx:dark:hover:bg-primary-900/25 hx:dark:hover:text-primary-300"
+              class="hextra-tag-btn hx:inline-flex hx:items-center hx:gap-2.5 hx:rounded-lg hx:border hx:border-gray-200 hx:bg-white hx:px-4 hx:py-2 hx:text-sm hx:font-medium hx:text-gray-700 hx:shadow-sm hx:focus-visible:hx:ring-2 hx:focus-visible:hx:ring-primary-500 hx:focus-visible:hx:ring-offset-2 hx:dark:border-neutral-700 hx:dark:bg-neutral-900 hx:dark:text-gray-300"
             >
-              <span class="hx:transition-colors hx:duration-200 hx:group-hover:hx:text-primary-700 hx:dark:group-hover:hx:text-primary-300">{{- .Page.Data.Term -}}</span>
-              <span class="hx:inline-flex hx:h-5 hx:min-w-5 hx:items-center hx:justify-center hx:rounded hx:bg-primary-100 hx:px-1.5 hx:text-xs hx:font-semibold hx:text-primary-700 hx:transition-colors hx:duration-200 hx:group-hover:hx:bg-primary-500 hx:group-hover:hx:text-white hx:dark:bg-primary-900/40 hx:dark:text-primary-300 hx:dark:group-hover:hx:bg-primary-500 hx:dark:group-hover:hx:text-white">{{ .Count }}</span>
+              <span class="hextra-tag-name">{{- .Page.Data.Term -}}</span>
+              <span class="hextra-tag-count hx:inline-flex hx:h-5 hx:min-w-5 hx:items-center hx:justify-center hx:rounded hx:bg-primary-100 hx:px-1.5 hx:text-xs hx:font-semibold hx:text-primary-700 hx:dark:bg-primary-900/40 hx:dark:text-primary-300">{{ .Count }}</span>
             </a>
           {{ end }}
         </nav>

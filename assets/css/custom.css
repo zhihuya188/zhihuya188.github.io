@@ -4,3 +4,43 @@
   --primary-saturation: 84%;
   --primary-lightness: 55%;
 }
+
+/* ===== 标签页按钮悬停交互 ===== */
+/* Hextra 的 Tailwind CSS 是预编译的，站点自定义 hover 变体类不会进入构建，
+   因此按钮交互样式在这里用原生 CSS 实现（亮/暗模式均覆盖）。 */
+.hextra-tag-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.hextra-tag-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.12);
+  border-color: var(--hx-color-primary-400);
+  background-color: color-mix(in oklab, var(--hx-color-primary-500) 8%, transparent);
+}
+
+.hextra-tag-btn:hover .hextra-tag-name {
+  color: var(--hx-color-primary-600);
+}
+
+/* 计数徽章：悬停时变实心主题色 + 白字 */
+.hextra-tag-btn:hover .hextra-tag-count {
+  background-color: var(--hx-color-primary-500);
+  color: #ffffff;
+}
+
+/* 暗色模式 */
+.dark .hextra-tag-btn:hover {
+  border-color: var(--hx-color-primary-500);
+  background-color: color-mix(in oklab, var(--hx-color-primary-500) 16%, transparent);
+}
+
+.dark .hextra-tag-btn:hover .hextra-tag-name {
+  color: var(--hx-color-primary-300);
+}
+
+.dark .hextra-tag-btn:hover .hextra-tag-count {
+  background-color: var(--hx-color-primary-500);
+  color: #ffffff;
+}
