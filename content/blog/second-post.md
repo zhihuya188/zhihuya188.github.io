@@ -1,5 +1,7 @@
 ---
 title: "用 GitHub Pages 自动部署 Hugo"
+aliases:
+  - '/posts/second-post/'
 date: 2026-07-19T11:30:00+08:00
 draft: false
 description: "介绍如何通过 GitHub Actions 把 Hugo 站点自动部署到 GitHub Pages。"

@@ -1,79 +1,57 @@
 baseURL = 'https://zhihuya188.github.io/'
 title = '我的 Hugo 站点'
-theme = 'stack'
+theme = 'hextra'
 
 # 中文站点
 defaultContentLanguage = 'zh-cn'
 hasCJKLanguage = true
 
-# 分页
-[pagination]
-    pagerSize = 5
-
-# URL 结构：page 类页面（search/archives）放在根路径。
-# 注意：posts 不写 permalinks，保持 Hugo 默认「文件名作 slug」，
-# 以免改变现有文章 URL（例如 /posts/deploy-to-github-pages/）。
-[permalinks]
-    page = '/:slug/'
-
-# Markdown 渲染（允许裸 HTML，保留文章里的 <hr> 等标签）
+# Markdown 渲染
 [markup]
+    # 允许裸 HTML
     [markup.goldmark]
         [markup.goldmark.renderer]
             unsafe = true
+    # Hextra 语法高亮
+    [markup.highlight]
+        noClasses = false
 
-# 主题参数
-[params]
-    # 首页 / 归档页展示的文章目录
-    mainSections = ['posts']
-    # RSS 输出全文
-    rssFullContent = true
-
-    # 页脚
-    [params.footer]
-        since = 2026
-
-    # 侧边栏
-    [params.sidebar]
-        emoji = '📝'
-        subtitle = '记录学习与生活的个人博客'
-
-    # 文章页
-    [params.article]
-        toc = true
-        readingTime = true
-
-    # 首页小部件（搜索 / 归档 / 分类 / 标签云）
-    [params.widgets]
-        homepage = [
-            { type = 'search' },
-            { type = 'archives', params = { limit = 5 } },
-            { type = 'categories', params = { limit = 10 } },
-            { type = 'tag-cloud', params = { limit = 10 } },
-        ]
-        page = [{ type = 'toc' }]
-
-    # 颜色主题切换（亮 / 暗 / 跟随系统）
-    [params.colorScheme]
-        toggle = true
-        default = 'auto'
-
-# 主菜单（search / archives 页面自带的菜单项会自动追加）
+# 顶部导航
 [menu]
     [[menu.main]]
-        identifier = 'home'
-        name = '首页'
-        url = '/'
+        name = '文章'
+        pageRef = '/blog'
         weight = 1
 
     [[menu.main]]
-        identifier = 'posts'
-        name = '文章'
-        url = '/posts/'
+        name = '关于'
+        pageRef = '/about'
         weight = 2
 
     [[menu.main]]
-        identifier = 'about'
-        name = '关于'
-        url = '/about/'
-        weight = 5
+        name = '搜索'
+        weight = 3
+        [menu.main.params]
+            type = 'search'
+
+    [[menu.main]]
+        name = 'GitHub'
+        url = 'https://github.com/zhihuya188'
+        weight = 4
+        [menu.main.params]
+            icon = 'github'
+
+[params]
+    # 导航栏显示站点名
+    [params.navbar]
+        displayTitle = true
+        displayLogo = false
+
+    # 页脚
+    [params.footer]
+        displayCopyright = false
+        displayPoweredBy = true
+
+    # 关闭"编辑此页"链接
+    [params.editURL]
+        enable = false

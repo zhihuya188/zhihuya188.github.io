@@ -1,5 +1,7 @@
 ---
 title: "git多账户管理"
+aliases:
+  - '/posts/test/'
 date: 2019-11-02T23:40:31+08:00
 description: ""
 draft: false

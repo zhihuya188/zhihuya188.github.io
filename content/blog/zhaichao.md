@@ -1,5 +1,7 @@
 ---
 title: "谁不是一边娶妻生子,一边死在路上"
+aliases:
+  - '/posts/zhaichao/'
 date: 2019-11-03T20:29:21+08:00
 description: "谁不是一边娶妻生子,一边死在路上"
 draft: false

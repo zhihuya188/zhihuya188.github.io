@@ -1,5 +1,7 @@
 ---
 title: "centos7使用笔记"
+aliases:
+  - '/posts/centos7使用笔记/'
 date: 2019-11-08T12:16:58+08:00
 description: "centos7使用笔记"
 draft: false

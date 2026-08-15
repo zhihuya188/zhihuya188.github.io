@@ -1,5 +1,7 @@
 ---
 title: "用 Hugo 写第一篇博客"
+aliases:
+  - '/posts/hello-hugo/'
 date: 2026-07-19T10:00:00+08:00
 draft: false
 description: "Hugo 让写博客变得简单：Markdown 即可，主题负责样式。"

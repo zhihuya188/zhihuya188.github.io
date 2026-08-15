@@ -1,5 +1,7 @@
 ---
 title: "我的第一篇文章"
+aliases:
+  - '/posts/first-post/'
 date: 2026-07-19T10:00:00+08:00
 draft: false
 description: "这是用 Hugo 写的第一篇示例文章，演示基本写作与代码块。"

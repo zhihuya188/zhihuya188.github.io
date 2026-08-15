@@ -1,5 +1,7 @@
 ---
 title: "hugo部署笔记"
+aliases:
+  - '/posts/hugo-first/'
 date: 2019-11-03T19:01:58+08:00
 description: "hugo部署笔记"
 draft: false

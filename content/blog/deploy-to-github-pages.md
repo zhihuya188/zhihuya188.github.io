@@ -1,5 +1,7 @@
 ---
 title: "把 Hugo 站点部署到 GitHub Pages"
+aliases:
+  - '/posts/deploy-to-github-pages/'
 date: 2026-07-19T11:00:00+08:00
 draft: false
 description: "用 GitHub Actions 实现推送即部署，再也不用手动上传。"
