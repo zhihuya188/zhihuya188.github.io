@@ -14,7 +14,7 @@ tags:
 categories:
   - 专业
   - Linux
-  - centos
+  - CentOS
 lastmod: 2019-11-08T12:00:00+08:00
 ---
 

@@ -89,3 +89,137 @@
 .dark .hextra-post-card .hextra-post-more {
   color: var(--hx-color-primary-400);
 }
+
+/* ===== 文章列表页三栏布局：左右侧栏 ===== */
+.hextra-blog-sidebar {
+  display: none;
+  flex-shrink: 0;
+}
+.hextra-blog-sidebar-left {
+  width: 15rem;
+  padding-right: 1.5rem;
+}
+.hextra-blog-sidebar-right {
+  width: 13rem;
+  padding-left: 1.5rem;
+}
+@media (min-width: 1280px) {
+  .hextra-blog-sidebar-left { display: block; }
+}
+@media (min-width: 1536px) {
+  .hextra-blog-sidebar-right { display: block; }
+}
+
+.hextra-sidebar-inner {
+  position: sticky;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+}
+
+/* widget 卡片 */
+.hextra-widget {
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+.dark .hextra-widget {
+  border-color: #3f3f46;
+  background-color: #171717;
+}
+
+.hextra-widget-title {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+.dark .hextra-widget-title { color: #e5e7eb; }
+
+.hextra-widget-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hextra-widget-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.hextra-widget-link:hover { color: var(--hx-color-primary-600); }
+.dark .hextra-widget-link { color: #9ca3af; }
+.dark .hextra-widget-link:hover { color: var(--hx-color-primary-400); }
+
+.hextra-widget-count {
+  border-radius: 0.25rem;
+  background-color: #f3f4f6;
+  padding: 0 0.375rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+.dark .hextra-widget-count {
+  background-color: #27272a;
+  color: #9ca3af;
+}
+
+/* 标签云 */
+.hextra-widget-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+.hextra-widget-tag {
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  border-radius: 9999px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  color: #4b5563;
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.hextra-widget-tag:hover {
+  border-color: var(--hx-color-primary-400);
+  color: var(--hx-color-primary-600);
+}
+.dark .hextra-widget-tag {
+  border-color: #3f3f46;
+  background-color: #27272a;
+  color: #9ca3af;
+}
+.dark .hextra-widget-tag:hover {
+  border-color: var(--hx-color-primary-500);
+  color: var(--hx-color-primary-400);
+}
+
+/* widget 文本与链接 */
+.hextra-widget-text {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+.dark .hextra-widget-text { color: #9ca3af; }
+
+.hextra-widget-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--hx-color-primary-600);
+  text-decoration: none;
+}
+.hextra-widget-more:hover { text-decoration: underline; text-underline-offset: 2px; }
+.dark .hextra-widget-more { color: var(--hx-color-primary-400); }
