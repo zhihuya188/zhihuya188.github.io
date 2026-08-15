@@ -11,7 +11,7 @@ tags:
   - WSL2
   - 插件
   - 飞书
-  - AI工具
+  - AI 工具
   - 部署
 
 draft: false

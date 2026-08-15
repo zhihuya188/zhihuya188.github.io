@@ -7,23 +7,29 @@
         {{ partial "custom/page-begin.html" . }}
         <br class="hx:mt-1.5 hx:text-sm" />
         {{ if .Title }}<h1 class="hx:text-center hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">{{ .Title }}</h1>{{ end }}
-        <div class="hx:mb-8"></div>
+        <div class="hx:mb-4"></div>
         <div class="content">
           {{ partial "custom/content-begin.html" . }}
           {{ .Content }}
           {{ partial "custom/content-end.html" . }}
         </div>
-        {{/* 标签按钮列表（方块样式，按文章数降序） */}}
-        <nav aria-label="标签列表" class="hx:grid hx:grid-cols-2 hx:sm:grid-cols-3 hx:lg:grid-cols-4 hx:gap-4 hx:mt-8">
+        {{/* 统计信息 */}}
+        <div class="hx:mt-6 hx:flex hx:items-center hx:gap-2 hx:text-sm hx:text-gray-500 hx:dark:text-gray-400">
+          <span>共 {{ len .Data.Terms }} 个标签</span>
+          <span aria-hidden="true" class="hx:text-gray-300 hx:dark:text-neutral-600">·</span>
+          <span>按文章数排序</span>
+        </div>
+        {{/* 标签按钮列表（紧凑方块，按文章数降序） */}}
+        <nav aria-label="标签列表" class="hx:mt-4 hx:flex hx:flex-wrap hx:gap-2.5">
           {{ $terms := sort .Data.Terms.ByCount "Count" "desc" }}
           {{ range $terms }}
             <a
               href="{{ .Page.RelPermalink }}"
-              title="{{ .Page.LinkTitle }}（{{ .Count }} 篇文章）"
-              class="hx:group hx:flex hx:flex-col hx:items-center hx:justify-center hx:gap-1.5 hx:rounded-lg hx:border hx:border-gray-200 hx:bg-white hx:px-4 hx:py-6 hx:text-center hx:shadow-sm hx:transition-all hx:duration-200 hx:hover:border-primary-400 hx:hover:bg-primary-50 hx:hover:shadow-md hx:hover:-hx:translate-y-0.5 hx:focus-visible:hx:ring-2 hx:focus-visible:hx:ring-primary-500 hx:focus-visible:hx:ring-offset-2 hx:dark:border-neutral-700 hx:dark:bg-neutral-900 hx:dark:hover:border-primary-500 hx:dark:hover:bg-primary-900/20"
+              title="{{ .Page.Data.Term }}（{{ .Count }} 篇文章）"
+              class="hx:group hx:inline-flex hx:items-center hx:gap-2 hx:rounded-lg hx:border hx:border-gray-200 hx:bg-white hx:px-3.5 hx:py-1.5 hx:text-sm hx:font-medium hx:text-gray-700 hx:shadow-sm hx:transition-all hx:duration-150 hx:hover:border-primary-400 hx:hover:bg-primary-50 hx:hover:text-primary-700 hx:hover:shadow hx:focus-visible:hx:ring-2 hx:focus-visible:hx:ring-primary-500 hx:focus-visible:hx:ring-offset-2 hx:dark:border-neutral-700 hx:dark:bg-neutral-900 hx:dark:text-gray-300 hx:dark:hover:border-primary-500 hx:dark:hover:bg-primary-900/20 hx:dark:hover:text-primary-300"
             >
-              <span class="hx:text-sm hx:font-medium hx:text-gray-800 hx:group-hover:hx:text-primary-700 hx:dark:text-gray-200 hx:dark:group-hover:hx:text-primary-300">{{- .Page.LinkTitle -}}</span>
-              <span class="hx:inline-flex hx:h-5 hx:min-w-5 hx:items-center hx:justify-center hx:rounded hx:bg-primary-100 hx:px-1.5 hx:text-xs hx:font-semibold hx:text-primary-700 hx:dark:bg-primary-900/40 hx:dark:text-primary-300">{{ .Count }} 篇</span>
+              <span>{{- .Page.Data.Term -}}</span>
+              <span class="hx:inline-flex hx:h-4.5 hx:min-w-4.5 hx:items-center hx:justify-center hx:rounded hx:bg-primary-100 hx:px-1 hx:text-xs hx:font-semibold hx:text-primary-700 hx:dark:bg-primary-900/40 hx:dark:text-primary-300">{{ .Count }}</span>
             </a>
           {{ end }}
         </nav>

@@ -7,9 +7,9 @@ description: "centos7使用笔记"
 draft: false
 tags:
   - Linux
-  - centos
-  - python
-  - sqlite3
+  - CentOS
+  - Python
+  - SQLite3
   - virtualenv
 categories:
   - 专业

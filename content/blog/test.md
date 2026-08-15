@@ -6,7 +6,7 @@ date: 2019-11-02T23:40:31+08:00
 description: "使用多个 GitHub 账户时的 SSH 与 remote 配置管理笔记。"
 draft: false
 tags:
-  - git
+  - Git
 categories:
   - git
 lastmod: 2019-11-02T12:00:00+08:00
