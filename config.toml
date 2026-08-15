@@ -6,6 +6,9 @@ theme = 'hextra'
 defaultContentLanguage = 'zh-cn'
 hasCJKLanguage = true
 
+# 用 Git 提交时间作为文章"最后修改"来源
+enableGitInfo = true
+
 # Markdown 渲染
 [markup]
     # 允许裸 HTML
@@ -15,6 +18,12 @@ hasCJKLanguage = true
     # Hextra 语法高亮
     [markup.highlight]
         noClasses = false
+
+# 输出格式（home 额外输出 llms.txt，供 AI 工具引用）
+[outputs]
+    home = ['html', 'llms']
+    page = ['html']
+    section = ['html', 'rss']
 
 # 顶部导航
 [menu]
@@ -47,16 +56,37 @@ hasCJKLanguage = true
             icon = 'github'
 
 [params]
+    # 文章页显示最后修改日期与作者（依赖 enableGitInfo）——注意：必须是 [params] 顶层键
+    displayUpdatedDate = true
+    displayUpdatedAuthor = true
+    dateFormat = '2006-01-02'
+
+    # 外部链接加箭头装饰
+    externalLinkDecoration = true
+
     # 导航栏显示站点名
     [params.navbar]
         displayTitle = true
         displayLogo = false
 
-    # 页脚
+    # 页脚（版权文本见 i18n/zh-cn.yaml）
     [params.footer]
-        displayCopyright = false
+        displayCopyright = true
         displayPoweredBy = true
 
     # 关闭"编辑此页"链接
     [params.editURL]
         enable = false
+
+    # 主题模式：跟随系统，允许手动切换
+    [params.theme]
+        default = 'system'
+        displayToggle = true
+
+    # 博客列表与文章页显示标签
+    [params.blog]
+        [params.blog.list]
+            displayTags = true
+
+    [params.toc]
+        displayTags = true
