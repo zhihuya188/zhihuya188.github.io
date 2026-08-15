@@ -1,6 +1,7 @@
 ---
 title: "SmailPro临时邮箱服务简介"
 date: 2026-08-03T09:00:00+08:00
+description: "SmailPro 临时邮箱服务简介：一次性邮箱的用途、使用场景与隐私边界。"
 created: 2026-08-03
 tags:
   - SmailPro
@@ -12,7 +13,6 @@ tags:
 
 draft: false
 ---
-# SmailPro 临时邮箱服务简介
 
 - **收录日期**：2026-08-03
 - **来源**：SmailPro 官网、服务条款、功能介绍页

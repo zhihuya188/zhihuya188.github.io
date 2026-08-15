@@ -1,6 +1,7 @@
 ---
 title: "DeepSeek Harness 安装配置精要"
 date: 2026-08-15T09:00:00+08:00
+description: "DeepSeek Harness（DSH）安装配置精要：环境、插件与部署要点。"
 created: 2026-08-15
 tags:
   - DSH
@@ -17,7 +18,6 @@ tags:
 draft: false
 ---
 
-# DeepSeek Harness 安装配置精要
 
 - **收录日期**：2026-08-15
 - **标签**：#DSH #DeepSeek #Harness #MCP #WSL2 #插件 #飞书 #AI工具

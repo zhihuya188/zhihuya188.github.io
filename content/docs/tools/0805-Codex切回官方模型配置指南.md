@@ -1,6 +1,7 @@
 ---
 title: "Codex 切回官方模型配置指南"
 date: 2026-08-05T09:00:00+08:00
+description: "Codex 接入 DeepSeek 后如何干净切回官方模型：一键脚本回退操作速查。"
 created: 2026-08-05
 tags:
   - Codex
