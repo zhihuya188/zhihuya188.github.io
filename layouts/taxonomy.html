@@ -15,7 +15,8 @@
         </div>
         {{/* 标签按钮列表（方块样式，按文章数降序） */}}
         <nav aria-label="标签列表" class="hx:grid hx:grid-cols-2 hx:sm:grid-cols-3 hx:lg:grid-cols-4 hx:gap-4 hx:mt-8">
-          {{ range .Data.Terms.Alphabetical }}
+          {{ $terms := sort .Data.Terms.ByCount "Count" "desc" }}
+          {{ range $terms }}
             <a
               href="{{ .Page.RelPermalink }}"
               title="{{ .Page.LinkTitle }}（{{ .Count }} 篇文章）"

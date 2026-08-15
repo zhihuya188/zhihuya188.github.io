@@ -6,14 +6,13 @@ created: 2026-08-15
 tags:
   - DSH
   - DeepSeek
-  - Harness
+  - DSH
   - MCP
   - WSL2
   - 插件
   - 飞书
   - AI工具
   - 部署
-  - 工具与通用
 
 draft: false
 ---

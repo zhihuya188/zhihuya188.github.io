@@ -6,8 +6,7 @@ date: 2019-11-03T19:01:58+08:00
 description: "hugo部署笔记"
 draft: false
 tags:
-  - hugo
-  - blog
+  - Hugo
 categories:
   - blog
 lastmod: 2019-11-03T12:00:00+08:00

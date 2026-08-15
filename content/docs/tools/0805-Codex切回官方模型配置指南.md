@@ -7,8 +7,6 @@ tags:
   - Codex
   - DeepSeek
   - AI工具
-  - 配置管理
-  - 工具与通用
 
 draft: false
 ---
