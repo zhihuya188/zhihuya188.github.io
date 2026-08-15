@@ -12,7 +12,7 @@ tags:
 draft: false
 ---
 
-> **来源**：上官昊阳提供的 DeepSeek 官方一键配置脚本「回退」说明（原文已存 `原始素材/0805-Codex从DeepSeek切回官方模型-原文.md`）。
+> **来源**：上官昊阳提供的 DeepSeek 官方一键配置脚本「回退」说明
 > **定位**：用 DeepSeek 官方一键脚本把 Codex（OpenAI 官方 AI 编程代理）接成 DeepSeek 模型后，如何干净切回 Codex 官方模型。属于「AI 编程工具配置」类速查。
 
 ---
@@ -66,13 +66,7 @@ DeepSeek 提供了一键脚本，把 Codex 的底层模型替换成 DeepSeek。�
 - **重启才生效**：完成后**完全退出并重启** Codex 客户端（ChatGPT 桌面端、VS Code 插件等），否则新配置不加载。
 - **默认模型**：恢复后 Codex 默认通常是 `o4-mini`；会话内用 `/model` 命令，或改 `config.toml` 的 `model` 字段，可换其他官方模型。
 
----
 
-## 四、关联知识
-
-- 与 [[0731-OpenClaw黑客龙虾部署与使用指南|《Kali+OpenClaw+DeepSeek部署黑客龙虾》]] 关联：那张卡是「反过来」的方向——在 Kali 上把 OpenClaw 接 DeepSeek API 当 AI 渗透助手；本卡讲的是 Codex 接完 DeepSeek 后怎么退回官方模型。两者都围绕「DeepSeek 接入 AI 编程代理」这一主题，互为补充：一个讲接入，一个讲回退。
-- 与 [[0815-DeepSeekHarness安装配置精要|《DeepSeek Harness 安装配置精要》]] 关联：那张卡是 Codex 接/退 DeepSeek 的配置切换，本张卡是 DeepSeek 自家官方 harness（DSH）的完整部署——同属"AI 编程代理工具配置"方向，一退一装互补。
-- 与 [[0815-AI从零到一入门全指南精要|《AI从零到一入门全指南》]] 关联：那张卡把 GPT Codex + Cloud Studio 列为「高阶写代码混合工作流」，本张卡是 Codex 接完第三方模型退回官方的速查——总推荐→配置回退，互补。
 
 ---
 

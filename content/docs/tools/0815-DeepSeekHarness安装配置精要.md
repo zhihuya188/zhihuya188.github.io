@@ -20,7 +20,6 @@ draft: false
 # DeepSeek Harness 安装配置精要
 
 - **收录日期**：2026-08-15
-- **来源**：本地文件 `E:/20260801/dsh-今日安装说明.md`（原文已存 `原始素材/0815-dsh今日安装说明-原文.md`）
 - **标签**：#DSH #DeepSeek #Harness #MCP #WSL2 #插件 #飞书 #AI工具
 
 ## 核心内容（大白话归纳）
@@ -92,13 +91,5 @@ pnpm dlx github:imetn/dsh-lark-bridge setup --project /home/yangyang/dsh
 
 你最近在 WSL2 上学 Linux、玩 AI 工具（Codex/DeepSeek、OpenClaw）、搞网络安全。DSH 是 DeepSeek 官方的"AI 代理操作系统"：把 GitHub / 浏览器 / 记忆 / 文件 / 飞书全接上后，可用飞书或 Web 界面指挥它干活，等于给自己配了常驻 AI 助手。这份文档是你**已经踩完坑的安装手册**，下次重装或加插件直接照抄命令。
 
-## 关联知识
+---
 
-- 与 [[0812-WSL2详细攻略|《WSL2详细攻略》]] 关联：DSH 整套装在本机 WSL2 上，文档第 6 节"WSL 控制 Windows"是那张卡"Windows/Linux 互通"的进阶实战；环境前置直接看那张。
-- 与 [[0805-Codex切回官方模型配置指南|《Codex切回官方模型配置指南》]] 关联：那张是 Codex 接/退 DeepSeek 的配置切换，本张是 DeepSeek 自家 harness 的完整部署——同属"AI 编程代理工具配置"方向，一退一装互补。
-- 与 [[0731-OpenClaw黑客龙虾部署与使用指南|《OpenClaw黑客龙虾部署与使用指南》]] 关联：OpenClaw 也是接 DeepSeek 的 AI 助手（含 C2/红队基础设施语义），本张是 DeepSeek 官方 harness 的通用部署；两者都是"DeepSeek 系 AI 代理"，可对照看。
-- 与 [[0815-AI从零到一入门全指南精要|《AI从零到一入门全指南》]] 关联：那张卡把 n8n / Dify 列为「高阶工作流」方向，本张是 DeepSeek 官方 harness 的部署落地（含 n8n 同生态 MCP/插件）——总路线→部署实战，互补。
-
-## 使用记录
-
-（还没用过，待填写）
