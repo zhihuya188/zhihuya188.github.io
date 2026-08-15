@@ -44,3 +44,48 @@
   background-color: var(--hx-color-primary-500);
   color: #ffffff;
 }
+
+/* ===== 文章列表卡片悬停交互 ===== */
+/* 文章列表页加宽：覆盖 Hextra 默认宽度变量（内容 72rem → 88rem，页面 80rem → 95rem） */
+.hextra-blog-page {
+  --hextra-max-page-width: 95rem;
+  --hextra-max-content-width: 88rem;
+}
+
+.hextra-post-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.hextra-post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.1);
+  border-color: var(--hx-color-primary-400);
+}
+
+.hextra-post-card:hover .hextra-post-title {
+  color: var(--hx-color-primary-600);
+}
+
+.hextra-post-card .hextra-post-more {
+  color: var(--hx-color-primary-600);
+}
+
+.hextra-post-card:hover .hextra-post-more {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* 暗色模式 */
+.dark .hextra-post-card:hover {
+  border-color: var(--hx-color-primary-500);
+  background-color: color-mix(in oklab, var(--hx-color-primary-500) 6%, transparent);
+}
+
+.dark .hextra-post-card:hover .hextra-post-title {
+  color: var(--hx-color-primary-300);
+}
+
+.dark .hextra-post-card .hextra-post-more {
+  color: var(--hx-color-primary-400);
+}

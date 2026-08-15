@@ -1,0 +1,49 @@
+{{ define "main" }}
+  <div class="hx:mx-auto hx:flex hextra-max-page-width hextra-blog-page">
+    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" false) }}
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--hextra-navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main id="content" class="hx:w-full hx:min-w-0 hextra-max-content-width hx:px-6 hx:pt-4 hx:md:px-12">
+        {{ partial "custom/page-begin.html" . }}
+        <br class="hx:mt-1.5 hx:text-sm" />
+        {{ if .Title }}<h1 class="hx:text-center hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">{{ .Title }}</h1>{{ end }}
+        <div class="content">
+          {{ partial "custom/content-begin.html" . }}
+          {{ .Content }}
+          {{ partial "custom/content-end.html" . }}
+        </div>
+
+        {{- $pages := partial "utils/sort-pages" (dict "page" . "by" site.Params.blog.list.sortBy "order" site.Params.blog.list.sortOrder) -}}
+        {{- $pagerSize := site.Params.blog.list.pagerSize | default 10 -}}
+        {{- $paginator := .Paginate $pages $pagerSize -}}
+
+        {{/* 文章卡片列表（hover 交互样式在 assets/css/custom.css） */}}
+        <div class="hx:mt-8 hx:flex hx:flex-col hx:gap-5">
+          {{- range $paginator.Pages }}
+            <article class="hextra-post-card hx:rounded-xl hx:border hx:border-gray-200 hx:bg-white hx:p-6 hx:shadow-sm hx:dark:border-neutral-700 hx:dark:bg-neutral-900">
+              <div class="hx:mb-1.5 hx:text-sm hx:text-gray-500 hx:dark:text-gray-400">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ partial "utils/format-date" .Date }}</time>
+              </div>
+              <h3 class="hx:text-xl hx:font-semibold">
+                <a href="{{ .RelPermalink }}" class="hextra-post-title hx:text-gray-900 hx:no-underline hx:dark:text-gray-100">{{ .Title }}</a>
+              </h3>
+              {{ if site.Params.blog.list.displayTags }}
+                <div class="hx:mt-2 hx:text-sm hx:leading-7">
+                  {{ partial "tags.html" (dict "context" .) }}
+                </div>
+              {{ end }}
+              <p class="hx:mt-3 hx:text-sm hx:leading-7 hx:text-gray-600 hx:dark:text-gray-400">{{- partial "utils/page-description" . -}}</p>
+              <div class="hx:mt-4">
+                <a href="{{ .RelPermalink }}" class="hextra-post-more hx:text-sm hx:font-medium">阅读更多 →</a>
+              </div>
+            </article>
+          {{- end }}
+        </div>
+
+        {{- if gt $paginator.TotalPages 1 -}}
+          {{ partial "components/blog-pager.html" $paginator }}
+        {{- end -}}
+        {{ partial "custom/page-end.html" . }}
+      </main>
+    </article>
+  </div>
+{{- end -}}
