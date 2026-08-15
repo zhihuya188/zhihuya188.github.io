@@ -38,24 +38,32 @@ enableGitInfo = true
         weight = 2
 
     [[menu.main]]
-        name = '关于'
-        pageRef = '/about'
+        name = '标签'
+        pageRef = '/tags'
         weight = 3
 
     [[menu.main]]
-        name = '搜索'
+        name = '关于'
+        pageRef = '/about'
         weight = 4
+
+    [[menu.main]]
+        name = '搜索'
+        weight = 5
         [menu.main.params]
             type = 'search'
 
     [[menu.main]]
         name = 'GitHub'
         url = 'https://github.com/zhihuya188'
-        weight = 5
+        weight = 6
         [menu.main.params]
             icon = 'github'
 
 [params]
+    # 站点描述（用于首页 SEO meta description）
+    description = '洋洋的个人博客：记录技术笔记、AI 资讯与生活随笔。'
+
     # 文章页显示最后修改日期与作者（依赖 enableGitInfo）——注意：必须是 [params] 顶层键
     displayUpdatedDate = true
     displayUpdatedAuthor = true
