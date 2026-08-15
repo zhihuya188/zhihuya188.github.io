@@ -1,0 +1,6 @@
+/* 自定义主题色：靛紫（Indigo-Violet），现代高级感 */
+:root {
+  --primary-hue: 262deg;
+  --primary-saturation: 84%;
+  --primary-lightness: 55%;
+}

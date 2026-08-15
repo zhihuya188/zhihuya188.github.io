@@ -5,36 +5,37 @@ layout: hextra-home
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-headline >}}
-  嗨，欢迎来到我的站点 👋
+  嗨，我是洋洋 👋<br class="hx:sm:block hx:hidden" />用文字记录学习与生活
 {{< /hextra/hero-headline >}}
 </div>
 
 <div class="hx:mb-12">
 {{< hextra/hero-subtitle >}}
-  一个用 Hugo + Hextra 搭建的个人博客&nbsp;<br class="hx:sm:block hx:hidden" />记录学习与生活的点滴
+  这里是我的个人博客：技术笔记、生活随笔，<br class="hx:sm:block hx:hidden" />以及一些折腾路上的记录。
 {{< /hextra/hero-subtitle >}}
 </div>
 
 <div class="hx:mb-6">
 {{< hextra/hero-button text="阅读文章" link="blog" >}}
+{{< hextra/hero-button text="关于我" link="about" style="outline" >}}
 </div>
 
 <div class="hx:mt-6"></div>
 
 {{< hextra/feature-grid >}}
   {{< hextra/feature-card
-    title="博客写作"
-    subtitle="用 Markdown 记录技术笔记与生活随笔，推送到 GitHub 即自动发布。"
+    title="技术笔记"
+    subtitle="Hugo、GitHub Pages、Linux 运维等踩坑与经验总结。"
     class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[240px]"
   >}}
   {{< hextra/feature-card
-    title="暗色模式"
-    subtitle="支持亮色 / 暗色 / 跟随系统三种模式，随时切换。"
+    title="生活随笔"
+    subtitle="记录日常思考与感悟，让日子有迹可循。"
     class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[240px]"
   >}}
   {{< hextra/feature-card
-    title="全文搜索"
-    subtitle="内置搜索功能，快速找到想要的内容。"
+    title="随时搜索"
+    subtitle="内置全文搜索，按 Ctrl+K 快速找到想要的内容。"
     class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[240px]"
   >}}
 {{< /hextra/feature-grid >}}
