@@ -11,4 +11,5 @@ weight: 1
   {{< card link="configuration" title="站点配置" icon="adjustments" >}}
   {{< card link="shortcodes" title="短代码速查" icon="badge-check" >}}
   {{< card link="site-management" title="站点管理" icon="adjustments" >}}
+  {{< card link="tools" title="工具文档" icon="folder" >}}
 {{< /cards >}}

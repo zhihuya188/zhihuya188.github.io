@@ -1,5 +1,6 @@
 ---
 title: "DeepSeek Harness 安装配置精要"
+date: 2026-08-15T09:00:00+08:00
 created: 2026-08-15
 tags:
   - DSH
@@ -12,6 +13,8 @@ tags:
   - AI工具
   - 部署
   - 工具与通用
+
+draft: false
 ---
 
 # DeepSeek Harness 安装配置精要

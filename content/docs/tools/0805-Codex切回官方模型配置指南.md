@@ -1,5 +1,6 @@
 ---
 title: "Codex 切回官方模型配置指南"
+date: 2026-08-05T09:00:00+08:00
 created: 2026-08-05
 tags:
   - Codex
@@ -7,6 +8,8 @@ tags:
   - AI工具
   - 配置管理
   - 工具与通用
+
+draft: false
 ---
 
 > **来源**：上官昊阳提供的 DeepSeek 官方一键配置脚本「回退」说明（原文已存 `原始素材/0805-Codex从DeepSeek切回官方模型-原文.md`）。
