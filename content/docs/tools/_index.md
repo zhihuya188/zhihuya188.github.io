@@ -13,4 +13,5 @@ weight: 6
   {{< card link="0814-扣子ai新闻应用开发与避坑指南" title="扣子 AI 新闻应用" icon="chat" >}}
   {{< card link="0815-ai从零到一入门全指南精要" title="AI 从零到一入门" icon="academic-cap" >}}
   {{< card link="0815-deepseekharness安装配置精要" title="DeepSeek Harness" icon="hextra" >}}
+  {{< card link="0816-dsh-browser使用说明" title="dsh-browser 使用" icon="terminal" >}}
 {{< /cards >}}
