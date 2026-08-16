@@ -52,6 +52,22 @@
   --hextra-max-content-width: 88rem;
 }
 
+/* 工具文档卡片（文章列表页工具区） */
+.hextra-tool-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease, border-color 0.2s ease;
+}
+.hextra-tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.1);
+  border-color: var(--hx-color-primary-400);
+  background-color: color-mix(in oklab, var(--hx-color-primary-500) 5%, transparent);
+}
+.dark .hextra-tool-card:hover {
+  border-color: var(--hx-color-primary-500);
+  background-color: color-mix(in oklab, var(--hx-color-primary-500) 10%, transparent);
+}
+
 .hextra-post-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease,
     background-color 0.2s ease, border-color 0.2s ease;
